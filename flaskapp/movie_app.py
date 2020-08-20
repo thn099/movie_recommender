@@ -8,6 +8,6 @@ def home():
 		movie_input = request.form["movie"]
 		# TODO: validate input
 		recommender = Recommender('movie_dataset.csv')
-		data = recommender.get_recommended_movies(movie_input)
+		data = recommender.get_recommended_movies(movie_input, 20)
 		return render_template("home.html", data=data)
 	return render_template("home.html")

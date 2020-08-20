@@ -22,7 +22,7 @@ class Recommender:
 	    return row['keywords']+" "+row['cast']+" "+row['genres']+" "+row['director']
 
 
-	def get_recommended_movies(self, movie_input):
+	def get_recommended_movies(self, movie_input, n):
 		features = ["keywords", "cast", "genres", "director"]
 
 		for feature in features:
@@ -43,7 +43,7 @@ class Recommender:
 		sorted_similar_movies = sorted(similar_movies,key=lambda x:x[1],reverse=True)[1:]
 
 		output = []
-		for i in range(10):
+		for i in range(n):
 			output.append(self.get_title_from_index(sorted_similar_movies[i][0]))
 
 		return output

@@ -12,7 +12,7 @@ Project structure:
 │   ├── movie_app.py
 │   ├── recommender.py
 │   ├── static
-│   │   └── index.css
+│   │   └── main.css
 │   └── templates
 │       └── home.html
 ├── movie_dataset.csv

@@ -6,17 +6,7 @@ Movie dataset contains 4800+ records with multiple fields. Select features are `
 
 Project structure:
 
-├── flaskapp
-│   ├── __init__.py
-│   ├── movie_app.py
-│   ├── recommender.py
-│   ├── static
-│   │   └── index.css
-│   └── templates
-│       └── home.html
-├── movie_dataset.csv
-└── run.py
-
+![](tree.png)
 
 # Set up
 

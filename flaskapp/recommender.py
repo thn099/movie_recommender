@@ -1,4 +1,3 @@
-import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -6,8 +5,9 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 class Recommender:
 
-	def __init__(self, file):
-		self.df = pd.read_csv(file)
+	def __init__(self, df):
+		self.df = df
+		self.movie_list = df["title"].tolist()
 
 
 	def get_title_from_index(self, index):
@@ -23,6 +23,9 @@ class Recommender:
 
 
 	def get_recommended_movies(self, movie_input, n):
+		if movie_input not in self.movie_list:
+			return []
+
 		features = ["keywords", "cast", "genres", "director"]
 
 		for feature in features:

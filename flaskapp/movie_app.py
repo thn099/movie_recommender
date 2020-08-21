@@ -1,13 +1,18 @@
 from flask import Flask, render_template, request
 from flaskapp import app
 from flaskapp.recommender import Recommender
+import pandas as pd
 
-@app.route("/", methods=['GET', 'POST'])
+
+@app.route('/')
 def home():
-	if request.method == "POST":
-		movie_input = request.form["movie"]
-		# TODO: validate input
-		recommender = Recommender('movie_dataset.csv')
-		data = recommender.get_recommended_movies(movie_input, 20)
-		return render_template("home.html", data=data)
-	return render_template("home.html")
+	df = pd.read_csv("movie_dataset.csv")
+	movie_list = df["title"].tolist()
+	query_parameters = request.args
+	movie_input = query_parameters.get('input')
+	if movie_input:
+		recommender = Recommender(df)
+		recommendations = recommender.get_recommended_movies(movie_input, 50)
+		return render_template("home.html", input=movie_input, movie_list=movie_list, recommendations=recommendations)
+	else:
+		return render_template("home.html", movie_list=movie_list)

@@ -2,7 +2,9 @@
 
 A movie recommendation engine using content based filtering. Similar movies was found using cosine similarity.
 
-Movie dataset contains 4800+ records with multiple fields. Select features are `["keywords", "cast", "genres", "director"]`
+Movie dataset contains 4800+ movie records. Selected features to calculate similarities are `["keywords", "cast", "genres", "director"]`
+
+Similarity scores are not precomputed.
 
 Project structure:
 
@@ -39,6 +41,6 @@ $ flask run
 By default, service will be running on `http://127.0.0.1:5000/`
 
 
-# UI
+# Demo
 
-![](ui.png)
+![](demo.gif)

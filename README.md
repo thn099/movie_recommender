@@ -1,6 +1,6 @@
 # Description
 
-A movie recommendation engine using content based filtering. Similar movies was found using cosine similarity.
+A movie recommendation engine using content based filtering.
 
 Movie dataset contains 4800+ movie records. Selected features to calculate similarities are `["keywords", "cast", "genres", "director"]`
 

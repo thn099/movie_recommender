@@ -1,10 +1,10 @@
 # Description
 
-A movie recommendation engine using content based filtering.
+A movie recommendation engine using content-based filtering. UI for this application is a website which ouputs similar movies from user input. There is a drop-down menu from the search bar to show which movies exists in the dataset.
 
-Movie dataset contains 4800+ movie records. Selected features to calculate similarities are `["keywords", "cast", "genres", "director"]`
+Movie dataset contains 4800+ movie records in a single csv file. Selected features to calculate similarities are `["keywords", "cast", "genres", "director"]`
 
-Similarity scores are not precomputed.
+Cosine similarity is used to calculate output. Similarity scores are computed on the fly upon user input.
 
 Project structure:
 

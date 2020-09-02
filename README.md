@@ -1,5 +1,7 @@
 # Description
 
+![](demo.gif)
+
 A movie recommendation engine using content-based filtering. UI for this application is a website which ouputs similar movies from user input. There is a drop-down menu from the search bar to show which movies exists in the dataset.
 
 Movie dataset contains 4800+ movie records in a single csv file. Selected features to calculate similarities are `["keywords", "cast", "genres", "director"]`
@@ -40,7 +42,3 @@ $ flask run
 
 By default, service will be running on `http://127.0.0.1:5000/`
 
-
-# Demo
-
-![](demo.gif)

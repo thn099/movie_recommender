@@ -15,8 +15,6 @@ Project structure:
 │   ├── __init__.py
 │   ├── movie_app.py
 │   ├── recommender.py
-│   ├── static
-│   │   └── main.css
 │   └── templates
 │       └── home.html
 ├── movie_dataset.csv
